@@ -1,6 +1,8 @@
 {
   "name": "bosch",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "a4d0250d"
 }
