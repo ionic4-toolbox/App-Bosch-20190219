@@ -52,40 +52,71 @@ ion-content {
       }
     }
   }
-  .premios {
-    margin: 35px 15px 40px;
-    overflow: hidden;
-    .icon {
-      display: table;
-      margin: 0 auto;
-      position: relative;
-      text-align: center;
-      a {
-        text-decoration: none;
-        color: #337ab7;
-        img {
-          width: 50px;
-          height: 50px;
+  ion-grid {
+    margin: 20px 0;
+    ion-row {
+      ion-col {
+        margin: 10px;
+        .menu-item {
+          background-color: white;
+          text-align: center;
+          padding: 25px 10px;
+          .inner-item {
+            height: 86px;
+            padding-top: 10px;
+            ion-img {
+              width: 50px;
+              height: 50px;
+              margin: auto;
+            }
+            ion-label {
+              font-weight: bold;
+              margin-top: 15px;
+              font-size: 12px;
+              text-align: center;
+            }
+          }
+          @media screen and (max-width: 320px) {
+            .inner-item {
+              height: 75px;
+              padding: 0;
+              ion-label {
+                font-size: 10px;
+              }
+            }
+          }
         }
-        h5 {
-          text-transform: uppercase;
-          line-height: 14px;
-          margin: 10px 0 0;
-          color: #222222;
-          font-size: 14px;
-        }
-      }
-      &::before, &::after {
-        content: ' ';
-        position: absolute;
-        height: 30px;
-        width: 50px;
-        top: 50%;
-        transform: translate(0, -50%);
-        background: url("../../assets/page-title.png") repeat-x center left;
       }
     }
   }
+
+  ion-item {
+    --background: transparent;
+    text-align: center;
+    margin: 40px 0 20px;
+    a {
+      text-decoration: none;
+      color: #337ab7;
+      width: 100%;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      h5 {
+        text-transform: uppercase;
+        line-height: 14px;
+        margin: 10px 0 0;
+        color: #222222;
+        font-size: 14px;
+      }
+    }
+    @media screen and (max-width: 320px) {
+      ion-label {
+        height: 70px;
+      }
+    }
+  }
+  
   .footer {
     background: url("../../assets/line.png") no-repeat bottom center;
     height: 3px;
