@@ -46,6 +46,11 @@ ion-content {
         }
       }
     }
+    @media screen and (max-width: 320px) {
+      ion-label {
+        height: 70px;
+      }
+    }
   }
   .premios {
     margin: 35px 15px 40px;
