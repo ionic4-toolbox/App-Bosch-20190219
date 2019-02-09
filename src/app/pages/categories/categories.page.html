@@ -11,10 +11,10 @@
     <h2>Categorías Productos</h2>
   </ion-label>
 
-  <ion-card *ngFor="let c of categorias; let i = index">
+  <ion-card *ngFor="let c of Categories; let i = index">
     <ion-card-content>
       <ion-item>
-        <ion-img src="../../../assets/categorias/{{i}}.png"></ion-img>
+        <ion-img src="../../../assets/categories/{{i}}.png"></ion-img>
         <ion-label>
           <h2>Calentador {{c.name}}</h2>
           <p>{{c.description}}</p>
