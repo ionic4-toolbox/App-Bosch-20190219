@@ -1,6 +1,6 @@
 ion-header {
   .header-top {
-    background: url("../../assets/header-top.png") no-repeat top center;
+    background: url("../../../assets/header-top.png") no-repeat top center;
     height: 10px;
   }
   ion-toolbar { 
@@ -12,44 +12,64 @@ ion-header {
   }
 }
 ion-content {
-  ion-item {
-    margin: 15px 10px;
-    --inner-border-width: 0;
-    ion-avatar {
-      width: 40px;
-      height: 40px;
-    }
-    ion-label {
-      height: 56px;
-      p {
-        white-space: normal;
-      }
-    }
-    &:nth-child(7) {
-      --background: transparent;
-      text-align: center;
-      margin: 40px 0 20px;
-      a {
-        text-decoration: none;
-        color: #337ab7;
-        width: 100%;
-        img {
-          width: 50px;
-          height: 50px;
+  ion-card {
+    ion-card-content {
+      padding: 0;
+      ion-item {
+        height: auto;
+        margin: 15px 0;
+        --inner-border-width: 0;
+        --background: transparent;
+        ion-img {     
+          width: 60px;
+          height: 120px;
+          margin-right: 15px;
         }
-        h5 {
-          text-transform: uppercase;
-          line-height: 14px;
-          margin: 10px 0 0;
-          color: #222222;
-          font-size: 14px;
+        ion-label {
+          h2 {
+            white-space: normal;
+          }
+          p {
+            white-space: normal;
+          }
         }
-      }
-    }
-    @media screen and (max-width: 320px) {
-      ion-label {
-        height: 70px;
+        &:nth-child(8) {
+          --background: transparent;
+          text-align: center;
+          margin: 40px 0 20px;
+          a {
+            text-decoration: none;
+            color: #337ab7;
+            width: 100%;
+            img {
+              width: 50px;
+              height: 50px;
+            }
+            h5 {
+              text-transform: uppercase;
+              line-height: 14px;
+              margin: 10px 0 0;
+              color: #222222;
+              font-size: 14px;
+            }
+          }
+        }
+        @media screen and (max-width: 320px) {
+          ion-avatar {
+            width: 60px;
+            height: 90px;
+          }
+          ion-label {
+            h2 {
+              font-size: 14px;
+            }
+            p {
+              font-size: 10px;
+            }
+          }
+        }
       }
     }
   }
+  
 }

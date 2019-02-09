@@ -8,67 +8,19 @@
 <ion-content padding>
 
   <ion-label>
-    <h1>Categorías Productos</h1>
+    <h2>Categorías Productos</h2>
   </ion-label>
 
-  <ion-item>
-    <ion-avatar slot="start">
-      <img src="../../assets/Productos.png"/>
-    </ion-avatar>
-    <ion-label>
-      <h2>Productos bosch</h2>
-      <p>Descubre los productos Bosch disponibles.</p>
-    </ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-avatar slot="start">
-      <img src="../../assets/Lapiz.png"/>
-    </ion-avatar>
-    <ion-label>
-      <h2>Registrar instalación</h2>
-      <p>Registra tus instalaciones para ganar puntos.</p>
-    </ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-avatar slot="start">
-      <img src="../../assets/Mis-Instalaciones.png"/>
-    </ion-avatar>
-    <ion-label>
-      <h2>Mis instalaciones</h2>
-      <p>Revisa todas tus instalaciones realizadas.</p>
-    </ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-avatar slot="start">
-      <img src="../../assets/mis-puntos.png"/>
-    </ion-avatar>
-    <ion-label>
-      <h2>Mis puntos</h2>
-      <p>Revisa los puntos acumulados gracias a tus instalaciones.</p>
-    </ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-avatar slot="start">
-      <img src="../../assets/Cursos.png"/>
-    </ion-avatar>
-    <ion-label>
-      <h2>Cursos</h2>
-      <p>Consulta los cursos gratuitos del programa de mejora  constante Bosch.</p>
-    </ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-avatar slot="start">
-      <img src="../../assets/Campannas.png"/>
-    </ion-avatar>
-    <ion-label>
-      <h2>Campañas y novedades</h2>
-      <p>Descubre las últimas noticias de los productos Bosch.</p>
-    </ion-label>
-  </ion-item>
-  <ion-item>
-    <a href="http://www.plomerossosbosch.com/index.php/canjea-tus-puntos/">
-      <img src="../../assets/premios.png" alt="">
-      <h5>Premios</h5>
-    </a>
-  </ion-item>
+  <ion-card *ngFor="let c of categorias; let i = index">
+    <ion-card-content>
+      <ion-item>
+        <ion-img src="../../../assets/categorias/{{i}}.png"></ion-img>
+        <ion-label>
+          <h2>Calentador {{c.name}}</h2>
+          <p>{{c.description}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
