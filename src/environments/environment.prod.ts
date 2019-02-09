@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  endpointURL: 'http://localhost/bosch2/wp-json/wp/v2/'
 };
