@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/shared/services/data.service';
 import { CategoriesService } from './categories.service';
 
 @Component({
@@ -13,19 +12,23 @@ export class CategoriesPage implements OnInit {
   productos: any[] = [];
 
   constructor(
-    private categories: CategoriesService
+    private categoriesService: CategoriesService
   ) { }
 
   ngOnInit() {
-    this.getCategoriesProductos();
+    this.loadCategories();
     // this.getProductos();
   }
 
-  getCategoriesProductos() {
-    this.categories.getCategories().subscribe((data: any[]) => {
+  loadCategories() {
+    this.categoriesService.getCategories().subscribe((data: any[]) => {
       this.Categories = data;
       console.log('ngOnInit() > items: %o', this.Categories);
     });
+  }
+
+  loadProducts(id: number) {
+    
   }
 
   // getProductos() {

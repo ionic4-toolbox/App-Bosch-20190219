@@ -1,9 +1,9 @@
 <ion-header translucent mode="ios">
-    <div class="header-top"></div>
-    <ion-toolbar>    
-      <ion-img src="assets/logo.png"></ion-img>
-    </ion-toolbar>
-  </ion-header>
+  <div class="header-top"></div>
+  <ion-toolbar>    
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content padding>
 
@@ -11,7 +11,7 @@
     <h2>Categorías Productos</h2>
   </ion-label>
 
-  <ion-card *ngFor="let c of Categories; let i = index">
+  <ion-card *ngFor="let c of Categories; let i = index" [routerLink]="['/products', c.id]">
     <ion-card-content>
       <ion-item>
         <ion-img src="../../../assets/categories/{{i}}.png"></ion-img>
