@@ -1,0 +1,23 @@
+<ion-header translucent mode="ios">
+  <div class="header-top"></div>
+  <ion-toolbar>    
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-label>
+    <h2>Productos Bosch</h2>
+  </ion-label>
+
+  <ion-card *ngFor="let p of products" [routerLink]="['/product-detail', p.id]">
+    <ion-card-header>
+      <ion-img [src]="p.featured_image_src"></ion-img>
+    </ion-card-header>
+    <ion-card-content>
+      <h2 text-center>{{p.title.rendered}}</h2>
+      <p></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
