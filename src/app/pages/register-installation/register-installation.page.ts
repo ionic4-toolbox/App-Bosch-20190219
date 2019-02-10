@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register-installation',
@@ -7,7 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterInstallationPage implements OnInit {
 
-  constructor() { }
+  registerForm: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) { 
+    this.registerForm = this.formBuilder.group({
+      noSerie: ['', Validators.required],
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      phone: ['', Validators.required],
+      supplier: ['', Validators.required],
+      install_photo: ['', Validators.required],
+      invoice_photo: ['', Validators.required]  ,
+      comments: ['', Validators.required]    
+    });
+  }
 
   ngOnInit() {
   }

@@ -7,4 +7,51 @@
 
 <ion-content padding>
 
+  <ion-label>
+    <h2>Registrar instalación</h2>
+  </ion-label>
+
+  <form [formGroup]="registerForm">
+    <ion-list padding-vertical>
+      <ion-item>
+        <ion-label position="floating">Número de serie</ion-label>
+        <ion-input type="text" formControlName="noSerie" required autofocus></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nombre del cliente</ion-label>
+        <ion-input type="text" formControlName="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">E-mail del cliente</ion-label>
+        <ion-input type="text" formControlName="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Teléfono del cliente</ion-label>
+        <ion-input type="text" formControlName="phone" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Distribuidor</ion-label>
+        <ion-input type="text" formControlName="supplier" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fotografía de la instalación</ion-label>
+        <ion-input type="text" formControlName="install_photo" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fotografía de la nota / factura</ion-label>
+        <ion-input type="text" formControlName="invoice_photo" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Comentarios</ion-label>
+        <ion-textarea type="text" lines="10" formControlName="comments" required></ion-textarea>
+      </ion-item>
+    </ion-list>
+      <!-- <ng-container *ngFor="let validation of validationMsg.email" >
+        <div class="error" *ngIf="_loginFormGroup.get('email').hasError(validation.type) && (_loginFormGroup.get('email').dirty || _loginFormGroup.get('email').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container> -->
+      
+  </form>
+
 </ion-content>
