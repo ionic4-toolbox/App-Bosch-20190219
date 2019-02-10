@@ -1,0 +1,29 @@
+ion-header {
+  .header-top {
+    background: url("../../../assets/header-top.png") no-repeat top center;
+    height: 10px;
+  }
+  ion-toolbar { 
+    --border-width: 0;
+    ion-img {
+      width: 150px;
+      height: 50px;;
+    }
+  }
+}
+ion-content {
+  h1 {
+    color: #222222;
+    font-size: 24px;
+    padding-bottom: 10px;
+    background: url("../../../assets/titular.png") repeat-x bottom left;
+  }
+  h4 {
+    font-size: 16px!important;
+  }
+
+  ion-img {
+    width: auto;
+    height: 300px;
+  }
+}

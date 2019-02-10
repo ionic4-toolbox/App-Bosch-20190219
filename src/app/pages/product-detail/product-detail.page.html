@@ -1,0 +1,22 @@
+<ion-header translucent mode="ios">
+  <div class="header-top"></div>
+  <ion-toolbar>    
+    <ion-img src="assets/logo.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-label>
+    <h2>Productos Bosch</h2>
+  </ion-label>
+
+  <h1>{{product?.title.rendered}}</h1>
+
+  <ion-img [src]="product?.featured_image_src"></ion-img>
+
+  <div class="product-details" [innerHTML]="product?.content.rendered"></div>
+
+  <ion-button size="full" routerLink="/register-installation">Registrar instalación</ion-button>
+
+</ion-content>
