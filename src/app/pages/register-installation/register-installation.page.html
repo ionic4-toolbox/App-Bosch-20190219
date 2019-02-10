@@ -1,7 +1,7 @@
 <ion-header translucent mode="ios">
   <div class="header-top"></div>
   <ion-toolbar>    
-    <ion-img src="assets/logo.png"></ion-img>
+    <ion-img src="assets/logo.png" routerLink="/home"></ion-img>
   </ion-toolbar>
 </ion-header>
 
@@ -34,18 +34,32 @@
         <ion-input type="text" formControlName="supplier" required></ion-input>
       </ion-item>
       <ion-item>
+        <input type="file" id="install_photo_input" #install_photo_input name="install_photo_input" hidden>
         <ion-label position="floating">Fotografía de la instalación</ion-label>
-        <ion-input type="text" formControlName="install_photo" required></ion-input>
+        <ion-input readonly type="text" formControlName="install_photo" required></ion-input>
+        <ion-icon name="camera" slot="end" (click)="presentInstallPhoto(install_photo_input)"></ion-icon>
       </ion-item>
       <ion-item>
+        <input type="file" id="invoice_photo_input" #invoice_photo_input name="invoice_photo_input" hidden>
         <ion-label position="floating">Fotografía de la nota / factura</ion-label>
         <ion-input type="text" formControlName="invoice_photo" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Comentarios</ion-label>
-        <ion-textarea type="text" lines="10" formControlName="comments" required></ion-textarea>
+        <ion-textarea rows="5" type="text" lines="10" formControlName="comments" required></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox></ion-checkbox>
+        <ion-label>Acepto términos y condiciones</ion-label>
       </ion-item>
     </ion-list>
+
+
+    <ion-button size="full">Registrar</ion-button>
+
+
+
+
       <!-- <ng-container *ngFor="let validation of validationMsg.email" >
         <div class="error" *ngIf="_loginFormGroup.get('email').hasError(validation.type) && (_loginFormGroup.get('email').dirty || _loginFormGroup.get('email').touched)">
           {{ validation.message }}
