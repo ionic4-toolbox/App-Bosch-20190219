@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CategoriesService } from './categories.service';
 
 @Component({
-  selector: 'app-Categories',
-  templateUrl: './Categories.page.html',
-  styleUrls: ['./Categories.page.scss'],
+  selector: 'app-categories',
+  templateUrl: './categories.page.html',
+  styleUrls: ['./categories.page.scss'],
 })
 export class CategoriesPage implements OnInit {
 
