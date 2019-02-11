@@ -56,7 +56,7 @@ export class HelpersService {
               that.uploadImage = resetBase64Image;
             });
           } else {
-            that.uploadImage = reader.result;
+            that.uploadImage = reader.result.toString();
           }
         });
       }, false);
