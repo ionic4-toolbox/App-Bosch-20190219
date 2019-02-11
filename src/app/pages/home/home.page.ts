@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -11,16 +10,10 @@ export class HomePage implements OnInit {
   items: any[];
 
   constructor(
-    public dataService: DataService
   ) {
   }
 
   ngOnInit() {
-    // console.log('> ngOnInit');
-    // this.dataService.getPosts().subscribe((data: any[]) => {
-    //   this.items = data;
-    //   console.log('ngOnInit() > items: %o', this.items);
-    // });
   }
 
 }

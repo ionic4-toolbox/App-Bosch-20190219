@@ -33,10 +33,6 @@ export class RegisterInstallationPage implements OnInit {
 
   presentInstallPhoto(photoInput) {
     this.helpers.presentActionSheet(photoInput);
-    // console.log(this.photoInput.files[0]);
-    // photoInput.onchange((res) => {
-    //   console.log(res.files[0]);
-    // });
   }
 
 }

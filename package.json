@@ -31,7 +31,6 @@
     "@ionic/pro": "2.0.4",
     "@ionic/storage": "^2.2.0",
     "cordova-android": "7.1.4",
-    "cordova-ios": "5.0.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-file-transfer": "1.7.1",
@@ -47,6 +46,8 @@
     "lodash": "^4.17.11",
     "rxjs": "~6.4.0",
     "sqlite": "3.0.1",
+    "ts-loader": "^5.3.3",
+    "webpack": "^4.29.3",
     "webpack-dev-server": "^3.1.14",
     "zone.js": "^0.8.29"
   },
@@ -99,8 +100,7 @@
       }
     },
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   }
 }

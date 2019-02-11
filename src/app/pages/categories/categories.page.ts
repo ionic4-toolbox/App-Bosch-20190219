@@ -17,7 +17,6 @@ export class CategoriesPage implements OnInit {
 
   ngOnInit() {
     this.loadCategories();
-    // this.getProductos();
   }
 
   loadCategories() {
@@ -30,12 +29,5 @@ export class CategoriesPage implements OnInit {
   loadProducts(id: number) {
     
   }
-
-  // getProductos() {
-  //   this.dataService.getAllProducts().subscribe((data: any[]) => {
-  //     this.productos = data;
-  //     console.log('ngOnInit() > items: %o', this.productos);
-  //   });
-  // }
 
 }
