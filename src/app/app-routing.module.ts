@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'products', loadChildren: './pages/products/products.module#ProductsPageModule' },
   { path: 'product-detail', loadChildren: './pages/product-detail/product-detail.module#ProductDetailPageModule' },
   { path: 'register-installation', loadChildren: './pages/register-installation/register-installation.module#RegisterInstallationPageModule' },
+  { path: 'user-installations', loadChildren: './pages/user-installations/user-installations.module#UserInstallationsPageModule' },
 ];
 
 @NgModule({
