@@ -10,7 +10,7 @@
           </ion-item>
           <ion-item>
             <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type=password formControlName="password" required></ion-input>
+            <ion-input type=password formControlName="password" (keyup)="checkEnter($event.key)" required></ion-input>
           </ion-item>
         </ion-list>
       </ion-card-content>
