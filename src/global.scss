@@ -25,3 +25,8 @@ ion-content {
     font-size: 14px;
   }
 }
+
+.toastHelper {
+  --background: var(--ion-color-secondary);
+  --color: white;
+}
