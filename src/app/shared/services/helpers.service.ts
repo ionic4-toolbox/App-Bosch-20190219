@@ -7,6 +7,7 @@ import { LoadingController, ToastController, ModalController } from '@ionic/angu
 export class HelpersService {
 
   modal: HTMLIonModalElement;
+  loading: any;
 
   constructor(
     private loadingCtrl: LoadingController,
@@ -15,10 +16,14 @@ export class HelpersService {
   ) { }
 
   async presentLoading(message: string = '') {
-    const loading = await this.loadingCtrl.create({
+    this.loading = await this.loadingCtrl.create({
       message: message
     });
-    return loading;
+    await this.loading.present();
+  }
+
+  async dismissLoading() {
+    await this.loading.dismiss();
   }
 
   async presentToast(message: string = '') {
