@@ -1,0 +1,22 @@
+<ion-content padding>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <ion-card>
+      <ion-img src="../../../assets/logo.png"></ion-img>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input type="text" formControlName="username" required autofocus></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type=password formControlName="password" required></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-button type="submit" size="full" [disabled]="!loginForm.valid">Accedder</ion-button>
+
+  </form>
+</ion-content>
