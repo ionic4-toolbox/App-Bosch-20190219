@@ -57,10 +57,52 @@ ion-content {
     ion-row {
       ion-col {
         margin: 10px;
+        &.seleccionador-wrapper {
+          a {
+            text-decoration: none;
+          }
+          .seleccionador {
+            ion-img {
+              width: 80px;
+              height: 80px;
+              width: 100%;
+              margin-top: 10px;
+              padding-left: 10px;            
+            }
+            &::before {
+              left: -1890px;
+              content: ' ';
+              position: absolute;
+              width: 2000px;
+              height: 30px;
+              top: 50%;
+              background: url('../../../assets/page-title.png') repeat-x center left;
+              -webkit-transform: translate(0, -50%);
+              -moz-transform: translate(0, -50%);
+              -ms-transform: translate(0, -50%);
+              -o-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+            }
+            &::after {
+              right: -1865px;
+              content: ' ';
+              position: absolute;
+              width: 2000px;
+              height: 30px;
+              top: 50%;
+              background: url('../../../assets/page-title.png') repeat-x center left;
+              -webkit-transform: translate(0, -50%);
+              -moz-transform: translate(0, -50%);
+              -ms-transform: translate(0, -50%);
+              -o-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+            }
+          }
+        }
         .menu-item {
           background-color: white;
           text-align: center;
-          padding: 25px 10px;
+          padding: 25px 10px;          
           .inner-item {
             height: 86px;
             padding-top: 10px;
