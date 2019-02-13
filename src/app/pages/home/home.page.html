@@ -6,6 +6,10 @@
 </ion-header>
 
 <ion-content fullscreen>
+  <ion-label>
+    <h2>Inicio</h2>
+  </ion-label>
+
   <ion-grid>
     <ion-row>
       <ion-col text-center class="seleccionador-wrapper">
@@ -19,66 +23,76 @@
     </ion-row>
     <ion-row>
       <ion-col routerLink="/categories">
-        <div class="menu-item">
-          <div class="inner-item">
+        <ion-card>
+          <ion-card-content text-center>
             <ion-img src="../../../assets/Productos.png"></ion-img>
             <ion-label>Productos bosch</ion-label>
-          </div>
-        </div>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
       <ion-col routerLink="/register-installation">
-        <div class="menu-item">
-          <div class="inner-item">
+        <ion-card>
+          <ion-card-content text-center>
             <ion-img src="../../../assets/Lapiz.png"></ion-img>
             <ion-label>Registrar instalación</ion-label>
-          </div>
-        </div>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>
-        <div class="menu-item" routerLink="/user-installations">
-          <div class="inner-item">
+      <ion-col routerLink="/user-installations">
+        <ion-card>
+          <ion-card-content text-center>
             <ion-img src="../../../assets/Mis-Instalaciones.png"></ion-img>
-            <ion-label>Mis instalaciones</ion-label>
-          </div>
-        </div>
+            <ion-label>Registrar instalación</ion-label>
+          </ion-card-content>
+        </ion-card> 
       </ion-col>
       <ion-col>
-        <div class="menu-item">
-          <div class="inner-item">
+        <ion-card>
+          <ion-card-content text-center>
             <ion-img src="../../../assets/mis-puntos.png"></ion-img>
             <ion-label>Mis puntos</ion-label>
-          </div>
-        </div>
+          </ion-card-content>
+        </ion-card> 
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <div class="menu-item">
-          <div class="inner-item">
-            <ion-img src="../../assets/Cursos.png"></ion-img>
+        <ion-card>
+          <ion-card-content text-center>
+            <ion-img src="../../../assets/Cursos.png"></ion-img>
             <ion-label>Cursos</ion-label>
-          </div>
-        </div>
+          </ion-card-content>
+        </ion-card> 
       </ion-col>
       <ion-col>
-        <div class="menu-item">
-          <div class="inner-item">
+        <ion-card>
+          <ion-card-content text-center>
             <ion-img src="../../../assets/Campannas.png"></ion-img>
             <ion-label>Campañas y novedades</ion-label>
-          </div>
-        </div>
+          </ion-card-content>
+        </ion-card> 
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center class="seleccionador-wrapper">
+        <a href="http://www.plomerossosbosch.com/index.php/canjea-tus-puntos/">
+          <div class="seleccionador">
+            <ion-img src="../../../assets/premios.png"></ion-img>
+            <ion-label>Premios</ion-label>
+          </div>   
+        </a>
       </ion-col>
     </ion-row>
   </ion-grid>
-
+<!-- 
   <ion-item>
     <a href="http://www.plomerossosbosch.com/index.php/canjea-tus-puntos/">
       <img src="../../../assets/premios.png" alt="">
       <h5>Premios</h5>
     </a>
-  </ion-item>
+  </ion-item> -->
 
   <div class="footer"></div>
 </ion-content>
