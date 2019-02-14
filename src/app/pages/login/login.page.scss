@@ -2,13 +2,21 @@ ion-content {
   ion-card {
     margin-top: 20vh;
     padding: 20px 0;
-    ion-img {
-      margin-top: 10px;
-      width: auto;
-      height: 70px;
-    }
-    ion-list {
-      ion-item {
+    ion-card-content {
+      padding: 13px 5px;
+      ion-img {
+        margin-top: 10px;
+        width: auto;
+        height: 70px;
+      }
+      ion-list {
+        background: transparent;
+        ion-item {
+          --background: transparent;
+          color: black;
+          // margin: 5px 10px;
+          border-bottom: 1px solid white;
+        }
       }
     }
   }
