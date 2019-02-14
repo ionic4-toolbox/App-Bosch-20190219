@@ -31,4 +31,8 @@ export class LoginService {
     this.storageService.set('token', authResult.token, StorageValues.IONIC);
   }
 
+  logout() {
+    
+  }
+
 }
