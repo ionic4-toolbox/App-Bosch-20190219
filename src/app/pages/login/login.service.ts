@@ -5,6 +5,7 @@ import { map, tap, catchError, shareReplay } from 'rxjs/operators';
 import { StorageService, StorageValues } from 'src/app/shared/services/storage.service';
 import { of } from 'rxjs';
 import { HelpersService } from 'src/app/shared/services/helpers.service';
+import { Router } from '@angular/router';
 
 const ENDPOINT_URL = environment.loginURL;
 
@@ -16,7 +17,8 @@ export class LoginService {
   constructor(
     private http: HttpClient,
     private storageService: StorageService,
-    private helpers: HelpersService
+    private helpers: HelpersService,
+    private router: Router
   ) { }
 
   login(username: string, password: string) {
@@ -32,7 +34,8 @@ export class LoginService {
   }
 
   logout() {
-    
+    this.storageService.remove('token', StorageValues.IONIC);
+    this.router.navigate(['/login']);
   }
 
 }
