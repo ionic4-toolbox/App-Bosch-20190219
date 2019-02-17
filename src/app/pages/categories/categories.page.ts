@@ -26,10 +26,6 @@ export class CategoriesPage implements OnInit {
     });
   }
 
-  test () {
-    console.log('aqui')
-  }
-
   loadProducts(id: number) {
     
   }
