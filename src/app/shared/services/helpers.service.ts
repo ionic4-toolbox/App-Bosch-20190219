@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LoadingController, ToastController, ModalController } from '@ionic/angular';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ export class HelpersService {
 
   modal: HTMLIonModalElement;
   loading: any;
+  jwtHelper = new JwtHelperService();
 
   constructor(
     private loadingCtrl: LoadingController,
@@ -151,4 +153,8 @@ export class HelpersService {
   /**
    * END WORKING WITH IMAGES (UPLOADING...)
    */
+
+  decodeToken(token) {
+    return this.jwtHelper.decodeToken(token);
+  } 
 }
