@@ -20,13 +20,8 @@ export class UserInstallationsPage implements OnInit, OnDestroy {
     this.getUserInstallations();
   }
 
-  getUserInstallations() {
-    this.subscriptions.add(
-      this.userInstallationService.getUserInstallations(44).subscribe((res: any) => {
-        this.installations = res;
-        console.log(res);
-      })
-    );
+  async getUserInstallations() {
+    await this.userInstallationService.getUserInstallations().then(res => res.subscribe(i => this.installations = i));
   }
 
   ngOnDestroy() {
