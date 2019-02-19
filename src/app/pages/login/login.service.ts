@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { map, tap, catchError, shareReplay } from 'rxjs/operators';
+import { tap, shareReplay } from 'rxjs/operators';
 import { StorageService, StorageValues } from 'src/app/shared/services/storage.service';
-import { of } from 'rxjs';
 import { HelpersService } from 'src/app/shared/services/helpers.service';
 import { Router } from '@angular/router';
 
