@@ -17,4 +17,47 @@ ion-content {
       margin: 10px 15px;
     }
   }
+
+  .no-installations {
+    border: 2px solid var(--ion-color-primary);
+    margin: 15px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  ion-card {
+    ion-card-header {
+      padding: 10px 0 0;
+      ion-img {
+        width: auto;
+        height: 200px;
+      }
+    }
+    ion-card-content {
+      padding: 0 0 10px;
+      h2 {
+        color: #000000;
+        font-size: 13px;
+        line-height: 13px;
+        margin: 25px 0 10px;
+      }
+      h3 {
+        font-size: 12px;
+        color: #999999;
+        line-height: 12px;
+        margin: 0 0 10px;
+      }
+      p {
+        color: #005691;
+        font-size: 12px;
+        line-height: 12px;
+        margin: 0 0 20px;
+      }
+      ion-button {
+        height: 30px;
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+  }
 }
