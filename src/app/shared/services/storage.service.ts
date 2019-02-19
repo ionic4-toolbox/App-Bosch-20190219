@@ -69,6 +69,13 @@ export class StorageService {
     }
   }
   /**
+   * Gets ionic individual storage and promise based key value
+   * @param key storage key
+   */
+  async getIonic(key): Promise<any> {
+    return await this._ionic.get(key);
+  }
+  /**
    * Removes pair key/value from the selected storage
    * @param key storage key
    * @param type storage type ex. localstorage, ionic, native
