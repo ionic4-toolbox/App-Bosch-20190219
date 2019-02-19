@@ -4,8 +4,10 @@
 
 export const environment = {
   production: false,
-  endpointURL: 'http://localhost/bosch2/wp-json/wp/v2/',
-  loginURL: 'http://localhost/bosch2/wp-json/jwt-auth/v1/token'
+  // endpointURL: 'http://localhost/bosch2/wp-json/wp/v2/',
+  // loginURL: 'http://localhost/bosch2/wp-json/jwt-auth/v1/token'
+  endpointURL: 'http://www.plomerossosbosch.com/wp-json/wp/v2/',
+  loginURL: 'http://www.plomerossosbosch.com/wp-json/jwt-auth/v1/token'
 };
 
 /*
